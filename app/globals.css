@@ -1,0 +1,28 @@
+:root { --ink:#14202b; --mist:#eef2f5; --line:#cfd8df; --signal:#0a7d6e; --white:#fff; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif; color:var(--ink); background:var(--white); line-height:1.55; }
+a { color:inherit; }
+header { display:flex; justify-content:space-between; align-items:center; padding:18px 6vw; border-bottom:1px solid var(--line); }
+header nav { display:flex; gap:20px; align-items:center; }
+.logo { font-weight:700; font-size:1.25rem; text-decoration:none; letter-spacing:-.02em; }
+.btn { background:var(--ink); color:#fff; border:0; padding:10px 18px; border-radius:8px; font:inherit; cursor:pointer; text-decoration:none; display:inline-block; }
+.btn:focus-visible, input:focus-visible { outline:3px solid var(--signal); outline-offset:2px; }
+.hero { display:grid; grid-template-columns:1.1fr .9fr; gap:5vw; padding:8vh 6vw; align-items:center; background:var(--mist); }
+.hero h1 { font-size:clamp(2.2rem,5vw,4rem); line-height:1.05; margin:0 0 16px; letter-spacing:-.03em; max-width:14ch; }
+.hero p { max-width:46ch; margin:0 0 24px; }
+.phone { aspect-ratio:9/18; max-height:60vh; margin:auto; border-radius:38px; border:10px solid var(--ink); background:linear-gradient(160deg,#0a7d6e,#14202b); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; padding:6vh 6vw; }
+.card { border:1px solid var(--line); border-radius:10px; padding:22px; }
+.card h3 { margin:0 0 6px; } .card .price { font-weight:700; color:var(--signal); }
+.narrow { max-width:420px; margin:8vh auto; padding:0 20px; }
+.narrow input { width:100%; padding:11px; margin:6px 0 14px; border:1px solid var(--line); border-radius:8px; font:inherit; }
+.err { color:#b3261e; min-height:1.4em; }
+.chat { max-width:760px; margin:0 auto; padding:24px 20px 120px; }
+.msg { padding:12px 16px; border-radius:12px; margin:12px 0; white-space:pre-wrap; max-width:85%; }
+.msg.user { background:var(--ink); color:#fff; margin-left:auto; }
+.msg.bot { background:var(--mist); }
+.src { font-size:.8rem; color:#51616f; margin-top:6px; }
+.composer { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid var(--line); padding:14px 20px; display:flex; gap:10px; max-width:760px; margin:0 auto; }
+.composer input { flex:1; padding:11px; border:1px solid var(--line); border-radius:8px; font:inherit; }
+@media (max-width:720px){ .hero{grid-template-columns:1fr;} .phone{max-height:36vh;} }
+@media (prefers-reduced-motion:reduce){ *{transition:none!important;} }

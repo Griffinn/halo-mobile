@@ -1,0 +1,7 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment: { POSTGRES_USER: halo, POSTGRES_PASSWORD: halo, POSTGRES_DB: halo }
+    ports: ["5433:5432"]
+    volumes: ["./db/init.sql:/docker-entrypoint-initdb.d/init.sql", "pgdata:/var/lib/postgresql/data"]
+volumes: { pgdata: {} }
